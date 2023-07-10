@@ -40,9 +40,8 @@
     </div>
     <h2>Фотографии лагеря</h2>
     <div class = "photo">
-      <img src = "picture1.jpg">
-      <img src = "picture3.jpg">
       <img src = "picture4.jpg">
+      <img src = "picture3.jpg">
       <img src = "picture6.jpg">
     </div>
     <div class =  "info-third">
@@ -64,14 +63,55 @@
       <h2>Информация по отъезду в лагерь: </h2>
 	    <p>Метро Южная. Отправка детей в детский лагерь Робин Гуд. Сбор в 10:00 у восточного входа в торговый комплекс на ул. Кировоградская, дом 9, корпус 4. Отправка колонны в 10:45. У Варшавского шоссе, от выхода из метро Южная нужно пройти вдоль торгового комплекса по Сумской или Днепропетровской улице.</p>
     </div>
+    <h2 class = "phrase">Пожалуйста, заполните заявку</h2>
+    <style>
+      .hidden {
+        display:none;
+      }
+    </style>
+    <form class="form_start" action="/apply/" method="POST">
+      <label>
+        Ваше имя:
+        <input type="text" name="name" id="name" placeholder="Илон" required autofocus>
+      </label>
+
+      <label>
+        Ваша фамилия:
+        <input type="text" name="surname" id="surname" placeholder="Маск" required>
+      </label>
+    
+      <label>
+        Почта:
+        <input type="email" name="email" id="email" placeholder="elon@musk.com" required>
+      </label>
+    
+      <label>
+        Телефон:
+        <input type="tel" name="phone_number" placeholder="89296920170" required>
+      </label>
+    
+      <label>
+        Паспорт:
+        <input type="password" name="passport" placeholder="4332498325" required>
+      </label>
+    
+      <label>
+        Ваша дата рождения:
+        <input type="date" name="birthday" placeholder="17.05.2006" required>
+      </label>
+
+      <button type="submit">Отправить заявку</button>
+      <div id="loader" class="hidden">Отправляем...</div>
+    </form>
     </main>
-    <footer class = "start">
+    <footer class = "start1">
+      <div class = "start">
         <p>ул. Озёрная, 1, Кремёнки, Калужская обл., 249185</p>
         <p>Телефон: 89296920170</p>
         <p>Вконтакте: vk.com/delicious_cultures</p>
         <p>Телеграм: t.me/deliciouscultures</p>
+      </div>
     </footer>
     <script src="script.js"></script>
-
   </body>
 </html>
