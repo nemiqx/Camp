@@ -30,6 +30,14 @@ function handleFormSubmit(event) {
     event.preventDefault()
     serializeForm(form)
     console.log("Отправка!")
+    const user = new User (document.querySelector("#name").value, 
+    document.querySelector("#surname").value, 
+    document.querySelector("#birthday").value, 
+    document.querySelector("#passport").value, 
+    document.querySelector("#phone_number").value, 
+    document.querySelector("#email").value)
+    userList.push(user)
+    console.log(userList)
 }
 
 form = document.querySelector(".form_start")
@@ -41,34 +49,6 @@ function toggleLoader() {
   loader.classList.toggle('hidden')
 }
 
-async function handleFormSubmit(event) {
-  event.preventDefault()
-  const data = serializeForm(event.target)
 
-  toggleLoader()
-
-  const response = await sendData(data)
-
-  toggleLoader()
-}
-
-
-async function handleFormSubmit(event) {
-  event.preventDefault()
-  const data = serializeForm(event.target)
-
-  toggleLoader()
-  const { status } = await sendData(data)
-  toggleLoader()
-
-  if (status === 200) {
-    onSuccess(event.target)
-  }
-}
-
-function onSuccess(formNode) {
-  alert('Ваша заявка отправлена!')
-  formNode.classList.toggle('hidden')
-}
 
 
